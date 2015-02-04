@@ -1,0 +1,21 @@
+{
+  "name": "sleepless",
+  "version": "0.0.0",
+  "homepage": "https://github.com/acenosekai/sleepless",
+  "authors": [
+    "acenosekai <acenosekai@gmail.com>"
+  ],
+  "description": "sleepless code",
+  "main": "./assets/app/app.js",
+  "keywords": [
+    "sleepless"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
