@@ -6,7 +6,7 @@
     "acenosekai <acenosekai@gmail.com>"
   ],
   "description": "sleepless code",
-  "main": "./assets/app/app.js",
+  "main": "assets/app/js/app.js",
   "keywords": [
     "sleepless"
   ],
@@ -17,5 +17,8 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "angular-ui-seed": "~0.0.2"
+  }
 }
