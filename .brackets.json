@@ -1,0 +1,5 @@
+{
+    "jscodehints.detectedExclusions": [
+        "/home/septiyan/nodeX/sleepless/bower_components/angular-ui-seed/test/protractor-conf.js"
+    ]
+}

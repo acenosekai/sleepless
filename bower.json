@@ -19,6 +19,7 @@
     "tests"
   ],
   "dependencies": {
-    "angular-ui-seed": "~0.0.2"
+    "angular-ui-seed": "~0.0.2",
+    "bootstrap": "~3.3.2"
   }
 }
