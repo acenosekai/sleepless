@@ -1,18 +1,15 @@
-app.controller('SignupCtrl', ['$scope', 'Auth', function ($scope, Auth) {
+app.controller('SignupCtrl', ['$scope','$state', 'Auth', function ($scope,$state, Auth) {
     $scope.doSignup = function (user) {
-        
-        console.log($scope.formSignup);
-        
-//        console.log($scope.formSignup.email);
-//        if (document.getElementById('signup-form').checkValidity()) {
-//            Auth.signUp(user, function () {
-//
-//            }, function () {
-//
-//            });
-//        } else {
-//            console.log("error")
-//        }
+        $scope.formSignup.$setSubmitted();
+        if ($scope.formSignup.$valid) {
+            Auth.signUp(user, function () {
+                
+            }, function () {
+
+            });
+        } else {
+            console.log("error")
+        }
 
     };
 }]);
