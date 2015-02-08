@@ -37,7 +37,8 @@ var jsFilesToInject = [
   //app js
    
   "app/js/app.js",
-  "app/js/core/services/VersionService.js",
+  "app/js/core/services/VersionService.js",    
+  "app/js/core/services/AuthService.js",
   "app/js/core/filters/VersionFilter.js",
   "app/js/core/directives/VersionDirective.js",
 

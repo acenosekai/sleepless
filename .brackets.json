@@ -1,5 +1,9 @@
 {
     "jscodehints.detectedExclusions": [
-        "/home/septiyan/nodeX/sleepless/bower_components/angular-ui-seed/test/protractor-conf.js"
+        "/home/septiyan/nodeX/sleepless/bower_components/angular-ui-seed/test/protractor-conf.js",
+        "home/septiyan/nodeX/sleepless/bower_components/jquery/src/ajax",
+        "/home/septiyan/nodeX/sleepless/bower_components/jquery/src/ajax/parseJSON.js",
+        "/home/septiyan/nodeX/sleepless/bower_components/jquery/src/ajax/var/nonce.js",
+        "/home/septiyan/nodeX/sleepless/bower_components/jquery/src/ajax/jsonp.js"
     ]
 }

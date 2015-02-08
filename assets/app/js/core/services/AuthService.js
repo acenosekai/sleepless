@@ -1,5 +1,5 @@
-app.factory('Auth', ['session','$http',
-    function (session,$http) {
+app.factory('Auth', ['$http',
+    function ($http) {
         return {
 //            getSession: function () {
 //                return session;
@@ -14,19 +14,20 @@ app.factory('Auth', ['session','$http',
 //                //                }
 //            },
             signUp: function (user, success, error) {
-                if (user != undefined) {
+                if(user == undefined){
+                    user = {};
+                }
+                    user.action = 'register';
+                    user.provider = 'local';
                     $http.post('/api/signup', user).
                     success(function (data, status, headers, config) {
                         console.log(data);
-                        success();
+                        success(data);
                     }).
                     error(function (data, status, headers, config) {
                         console.log(data);
-                        error();
+                        error(data);
                     });
-                } else {
-                    error();
-                }
             },
         };
 }]);

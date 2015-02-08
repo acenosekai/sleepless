@@ -19,7 +19,10 @@
 
 module.exports.policies = {
      '*': ['passport', 'sessionAuth'],
-
+RestController:{
+    '*':false,
+    'signup':'passport'
+},
  'auth': {
     '*': ['passport']
   }
