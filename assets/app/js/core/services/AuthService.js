@@ -1,33 +1,63 @@
 app.factory('Auth', ['$http',
-    function ($http) {
+    function($http) {
         return {
-//            getSession: function () {
-//                return session;
-//            },
-//            signIn: function (user, succes, error) {
-//                console.log("doSignIn");
-//                //                if (login.username == "admin" && login.password == "admin") {
-//                //                    session.isLogedIn = true;
-//                //                    return true;
-//                //                } else {
-//                //                    return false;
-//                //                }
-//            },
-            signUp: function (user, success, error) {
-                if(user == undefined){
+            //            getSession: function () {
+            //                return session;
+            //            },
+            //            signIn: function (user, succes, error) {
+            //                console.log("doSignIn");
+            //                //                if (login.username == "admin" && login.password == "admin") {
+            //                //                    session.isLogedIn = true;
+            //                //                    return true;
+            //                //                } else {
+            //                //                    return false;
+            //                //                }
+            //            },
+            register: function(user, success, error) {
+                if (user == undefined) {
                     user = {};
                 }
-                    user.action = 'register';
-                    user.provider = 'local';
-                    $http.post('/api/signup', user).
-                    success(function (data, status, headers, config) {
-                        console.log(data);
-                        success(data);
-                    }).
-                    error(function (data, status, headers, config) {
-                        console.log(data);
+                $http.post('/api/auth/local/register', user).
+                success(function(data, status, headers, config) {
+                    if (data.errors != null) {
                         error(data);
-                    });
+                    } else {
+                        success(data);
+                    }
+                }).
+                error(function(data, status, headers, config) {
+                    error(data);
+                });
             },
+            login: function(user, success, error) {
+                if (user == undefined) {
+                    user = {identifier:null};
+                }
+                
+                $http.post('/api/auth/local', user).
+                success(function(data, status, headers, config) {                   
+                    if (data.errors != null) {
+                        error(data);
+                    } else {
+                        success(data);
+                    }
+                }).
+                error(function(data, status, headers, config) {                    
+                    error(data);
+                });
+                
+            },
+            logout: function(user, redirect) {
+                
+                $http.get('/api/auth/logout').
+                success(function(data, status, headers, config) {
+                    redirect(data);
+                }).
+                error(function(data, status, headers, config) {
+                    redirect(data);
+                });
+                
+            }
         };
-}]);
+    }
+]);

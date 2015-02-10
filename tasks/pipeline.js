@@ -55,8 +55,8 @@ var jsFilesToInject = [
   
   //auth
     "app/js/auth/state.js",
-    "app/js/auth/controllers/SignupCtrl.js",
-    "app/js/auth/controllers/SigninCtrl.js"
+    "app/js/auth/controllers/RegisterCtrl.js",
+    "app/js/auth/controllers/LoginCtrl.js"
   //'js/dependencies/**/*.js',
 
   // All of the rest of your client-side js files

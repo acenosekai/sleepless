@@ -9,10 +9,10 @@
                     <form role="form">
                         <fieldset>
                             <div class="form-group">
-                                <input class="form-control" ng-model="login.username" placeholder="Username/Email" type="text" autofocus="">
+                                <input class="form-control" ng-model="login.identifier" placeholder="Username or Email" type="text" autofocus="" required="required">
                             </div>
                             <div class="form-group">
-                                <input class="form-control" ng-model="login.password" placeholder="Password" type="password" value="">
+                                <input class="form-control" ng-model="login.password" placeholder="Password" type="password" value="" required="required">
                             </div>
                             <div class="checkbox">
                                 <label>
@@ -20,7 +20,7 @@
                             </div>
                             <!-- Change this to a button or input when using this as a form -->
                             <a ng-click="doLogin(login)" class="btn btn-sm btn-success">Sign In</a>
-                            <a ui-sref="app.signup" class="btn btn-sm btn-primary">Sign Up</a>
+                            <a ui-sref="app.register" class="btn btn-sm btn-primary">Sign Up</a>
                         </fieldset>
                     </form>
                 </div>

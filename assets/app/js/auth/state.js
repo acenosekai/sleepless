@@ -2,20 +2,20 @@
 app.config(['$stateProvider', function($stateProvider) {
 
   $stateProvider
-    .state('app.signin', {
-      url: '/signin',
-      templateUrl: 'app/js/auth/templates/signin.tpl.html',
-      controller: 'SigninCtrl'
+    .state('app.login', {
+      url: '/login',
+      templateUrl: 'app/js/auth/templates/login.tpl.html',
+      controller: 'LoginCtrl'
     })
     .state('app.signout', {
       url: '/about',
       templateUrl: 'app/js/auth/templates/signout.tpl.html',
       controller: 'SignoutCtrl'
     })
-    .state('app.signup', {
-      url: '/signup',
-      templateUrl: 'app/js/auth/templates/signup.tpl.html',
-      controller: 'SignupCtrl'
+    .state('app.register', {
+      url: '/register',
+      templateUrl: 'app/js/auth/templates/register.tpl.html',
+      controller: 'RegisterCtrl'
     });
 
 }]);
