@@ -7,10 +7,10 @@ app.config(['$stateProvider', function($stateProvider) {
       templateUrl: 'app/js/auth/templates/login.tpl.html',
       controller: 'LoginCtrl'
     })
-    .state('app.signout', {
-      url: '/about',
-      templateUrl: 'app/js/auth/templates/signout.tpl.html',
-      controller: 'SignoutCtrl'
+    .state('app.logout', {
+      url: '/logout',
+//      templateUrl: 'app/js/auth/templates/signout.tpl.html',
+      controller: 'LogoutCtrl'
     })
     .state('app.register', {
       url: '/register',

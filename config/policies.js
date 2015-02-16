@@ -22,7 +22,8 @@ module.exports.policies = {
     RestController: {
         '*': false,
         'callback': 'passport',
-        'logout':'passport'
+        'logout':'passport',
+        'session':'passport'
     },
     'auth': {
         '*': ['passport']

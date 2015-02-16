@@ -47,14 +47,24 @@ app.factory('Auth', ['$http',
                 });
                 
             },
-            logout: function(user, redirect) {
+            logout: function(user, success, error) {
                 
                 $http.get('/api/auth/logout').
                 success(function(data, status, headers, config) {
-                    redirect(data);
+                    success(data);
                 }).
                 error(function(data, status, headers, config) {
-                    redirect(data);
+                    error(data);
+                });
+                
+            },
+            getSession: function(success,error) {                
+                $http.get('/api/auth/session').
+                success(function(data, status, headers, config) {
+                    success(data);
+                }).
+                error(function(data, status, headers, config) {
+                    error(data);
                 });
                 
             }

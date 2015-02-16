@@ -51,7 +51,8 @@ module.exports.routes = {
     'post /api/auth/local': 'RestController.callback',
     'post /api/auth/local/:action': 'RestController.callback',
     
-    'get /api/auth/logout': 'RestController.signout'
+    'get /api/auth/logout': 'RestController.logout',
+    'get /api/auth/session': 'RestController.session'
     
 
     /***************************************************************************

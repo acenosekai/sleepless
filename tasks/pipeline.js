@@ -56,6 +56,7 @@ var jsFilesToInject = [
   //auth
     "app/js/auth/state.js",
     "app/js/auth/controllers/RegisterCtrl.js",
+    "app/js/auth/controllers/LogoutCtrl.js",
     "app/js/auth/controllers/LoginCtrl.js"
   //'js/dependencies/**/*.js',
 

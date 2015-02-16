@@ -21,18 +21,22 @@ var RestController = {
                 // will available.
                 res.json({
                     errors: err,
-                    user: user,
-                    session: req.session
+                    user: user
                 });
             });
         });
     },
-    signout: function(req, res) {
+    logout: function(req, res) {
         req.logout();
         res.json({
             success: true
         });
     },
+    session: function(req, res) {
+        res.json({
+             session: req.session
+        });
+    }
 
 }
 
